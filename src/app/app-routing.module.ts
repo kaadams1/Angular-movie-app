@@ -28,6 +28,10 @@ const routes: Routes = [
     component: MovieComponent
   },
   {
+    path: 'genres',
+    component: GenresComponent
+  },
+  {
     path: '**',
     redirectTo: ''
   }
