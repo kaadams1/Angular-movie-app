@@ -12,6 +12,7 @@ import { take } from 'rxjs';
 export class MoviesComponent {
   movies: Movie[] = [];
   genreId: string | null = null;
+  searchValue: string | null = null;
 
   constructor(private moviesService: MoviesService, private route: ActivatedRoute) {}
 
@@ -32,8 +33,8 @@ export class MoviesComponent {
     });
   }
 
-  getPagedMovies(page: number) {
-    this.moviesService.searchMovies(page).subscribe((movies) => {
+  getPagedMovies(page: number, searchInput?: string) {
+    this.moviesService.searchMovies(page, searchInput).subscribe((movies) => {
       this.movies = movies;
     });
   }
@@ -44,7 +45,17 @@ export class MoviesComponent {
     if (this.genreId) {
       this.getMoviesByGenre(this.genreId, pageNumber);
     } else {
-      this.getPagedMovies(pageNumber);
+      if (this.searchValue) {
+        this.getPagedMovies(pageNumber, this.searchValue);
+      } else {
+        this.getPagedMovies(pageNumber);
+      }
+    }
+  }
+
+  searchChanged() {
+    if (this.searchValue) {
+      this.getPagedMovies(1, this.searchValue);
     }
   }
 }
