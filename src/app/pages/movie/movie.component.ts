@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { first } from 'rxjs';
 import { Movie, MovieVideo, MovieImages, MovieCredits } from '../../models/movie';
 import { MoviesService } from '../../services/movies.service';
 import { IMAGE_SIZES } from '../../constants/image-sizes';
-import { first } from 'rxjs';
 
 @Component({
   selector: 'app-movie',
