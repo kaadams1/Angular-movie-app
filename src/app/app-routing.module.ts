@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { GenresComponent } from './pages/genres/genres.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MoviesComponent } from './pages/movies/movies.component';
-import { TvshowsComponent } from './pages/tvshows/tvshows.component';
+import { TvShowsComponent } from './pages/tvshows/tvshows.component';
 import { MovieComponent } from './pages/movie/movie.component';
 
 const routes: Routes = [
@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'tvshows',
-    component: TvshowsComponent
+    component: TvShowsComponent
   },
   {
     path: 'genres',

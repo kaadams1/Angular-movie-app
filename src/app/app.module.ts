@@ -7,7 +7,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MoviesComponent } from './pages/movies/movies.component';
-import { TvshowsComponent } from './pages/tvshows/tvshows.component';
+import { TvShowsComponent } from './pages/tvshows/tvshows.component';
+import { TvShowComponent } from './pages/tvshow/tvshow.component';
 import { GenresComponent } from './pages/genres/genres.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SliderComponent } from './components/slider/slider.component';
@@ -21,6 +22,7 @@ import { VideoEmbedComponent } from './components/video-embed/video-embed.compon
 import { ImageModule } from 'primeng/image';
 import { CarouselModule } from 'primeng/carousel';
 import { InputTextModule } from 'primeng/inputtext';
+import { TvItemComponent } from './components/tv-item/tv-item.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,15 @@ import { InputTextModule } from 'primeng/inputtext';
     FooterComponent,
     HomeComponent,
     MoviesComponent,
-    TvshowsComponent,
+    TvShowsComponent,
     GenresComponent,
     SliderComponent,
     ItemsBannerComponent,
     ItemComponent,
     MovieComponent,
-    VideoEmbedComponent
+    VideoEmbedComponent,
+    TvShowComponent,
+    TvItemComponent
   ],
   imports: [
     BrowserModule,
