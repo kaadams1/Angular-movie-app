@@ -23,6 +23,8 @@ import { ImageModule } from 'primeng/image';
 import { CarouselModule } from 'primeng/carousel';
 import { InputTextModule } from 'primeng/inputtext';
 import { TvItemComponent } from './components/tv-item/tv-item.component';
+import { TvSliderComponent } from './components/tv-slider/tv-slider.component';
+import { TvItemsBannerComponent } from './components/tv-items-banner/tv-items-banner.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { TvItemComponent } from './components/tv-item/tv-item.component';
     MovieComponent,
     VideoEmbedComponent,
     TvShowComponent,
-    TvItemComponent
+    TvItemComponent,
+    TvSliderComponent,
+    TvItemsBannerComponent
   ],
   imports: [
     BrowserModule,

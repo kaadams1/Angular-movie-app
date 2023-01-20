@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesService } from 'src/app/services/movies.service';
+import { MoviesService } from '../../services/movies.service';
+import { TvShowsService } from '../../services/tvShows.service';
 import { Genre } from '../../models/genres';
 
 @Component({
@@ -9,12 +10,17 @@ import { Genre } from '../../models/genres';
 })
 export class GenresComponent {
   genres: Genre[] = [];
+  tvShowGenres: Genre[] = [];
 
-  constructor(private moviesService: MoviesService) {}
+  constructor(private moviesService: MoviesService, private tvShowsService: TvShowsService) {}
 
   ngOnInit(): void {
     this.moviesService.getMovieGenres().subscribe((genresData) => {
       this.genres = genresData;
+    });
+
+    this.tvShowsService.getTvGenres().subscribe((genresData) => {
+      this.tvShowGenres = genresData;
     });
   }
 }

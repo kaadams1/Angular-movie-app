@@ -36,6 +36,14 @@ const routes: Routes = [
     component: GenresComponent
   },
   {
+    path: 'tvshow/:id',
+    component: TvShowsComponent
+  },
+  {
+    path: 'tvshows/genres/:genreId',
+    component: TvShowsComponent
+  },
+  {
     path: '**',
     redirectTo: ''
   }
