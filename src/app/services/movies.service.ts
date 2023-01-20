@@ -71,4 +71,12 @@ export class MoviesService {
       })
     );
   }
+
+  getMoviesSimilar(id: string) {
+    return this.http.get<MovieDto>(`${this.baseUrl}/movie/${id}/similar?api_key=${this.apiKey}`).pipe(
+      switchMap((res) => {
+        return of(res.results.slice(0, 12));
+      })
+    );
+  }
 }
