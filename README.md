@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Other Technologies
 
-PrimeNG
-SCSS
-TMDB API
+*PrimeNG
+*SCSS
+*TMDB API
 
 # Description
 
