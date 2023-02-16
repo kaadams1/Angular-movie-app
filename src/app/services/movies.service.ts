@@ -41,7 +41,6 @@ export class MoviesService {
   getMovieVideos(id: string) {
     return this.http.get<MovieVideoDto>(`${this.baseUrl}/movie/${id}/videos?api_key=${this.apiKey}`).pipe(
       switchMap((res) => {
-        // console.log(res.results);
         return of(res.results);
       })
     );
